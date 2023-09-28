@@ -8,10 +8,10 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v4
       - name: Install Dependencies
-        run: npm install
+        run: cd aula1 && npm install
       - name: Run Linter
-        run: npm run lint
+        run: cd aula1 && npm run lint
       - name: Run Prettier
-        run: npm run prettier
+        run: cd aula1 && npm run prettier
       - name: Run Tests
-        run: npm run test
+        run: cd aula1 && npm run test

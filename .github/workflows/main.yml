@@ -15,3 +15,5 @@ jobs:
         run: cd aula1 && npm run prettier
       - name: Run Tests
         run: cd aula1 && npm run test
+      - name: Run Build
+        run: npm run build

@@ -17,3 +17,8 @@ jobs:
         run: cd aula1 && npm run test
       - name: Run Build
         run: cd aula1 && npm run build
+      - name: Run Deploy
+        env:
+          NETLIFY_SITE_ID: ${{ vars.NETLIFY_SITE_ID }}
+          NETLIFY_AUTH_TOKEN: ${{ vars.NETLIFY_AUTH_TOKEN }}
+        run: cd aula1 &&  npx netlify-cli deploy --site $NETLIFY_SITE_ID --auth $NETLIFY_AUTH_TOKEN --prod

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import About from "../../pages/about.js"
 
 export default function Home() {
   return (

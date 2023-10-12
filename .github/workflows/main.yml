@@ -1,0 +1,17 @@
+name: CI
+run-name: ${{ github.actor }} is learning GitHub Actions
+on: [push]
+jobs:
+  Linter:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v4
+      - name: Install Dependencies
+        run: cd aula1 && npm install
+      - name: Run Linter
+        run: cd aula1 && npm run lint
+      - name: Run Prettier
+        run: cd aula1 && npm run prettier
+      - name: Run Tests
+        run: cd aula1 && npm run test

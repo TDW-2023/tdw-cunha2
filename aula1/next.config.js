@@ -5,13 +5,11 @@ const nextConfig = {
         unoptimized: true
     },
     output: 'export',
-    trailingSlash: true,
+    experimental: {
+      forceSwcTransforms: true,
+    },
     
 }
 
 
-module.exports = {
-    experimental: {
-      forceSwcTransforms: true,
-    },
-  }
+module.exports = nextConfig

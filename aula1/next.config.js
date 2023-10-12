@@ -1,4 +1,17 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
 
-module.exports = nextConfig;
+const nextConfig = {
+    images: {
+        unoptimized: true
+    },
+    output: 'export',
+    trailingSlash: true,
+    
+}
+
+
+module.exports = {
+    experimental: {
+      forceSwcTransforms: true,
+    },
+  }
